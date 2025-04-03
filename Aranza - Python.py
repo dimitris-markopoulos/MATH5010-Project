@@ -7,9 +7,10 @@ import backtrader as bt
 import yfinance as yf
 import pandas as pd
 import backtrader.feeds as btfeeds
+import matplotlib.pyplot as plt
+# %matplotlib inline
 
-
-df = yf.download('MSFT', start='2023-01-01', end='2023-12-31')
+df = yf.download('SPY', start='2023-01-01', end='2023-12-31')
 df.columns = df.columns.droplevel('Ticker')
 data = btfeeds.PandasData(dataname=df)
 df
@@ -146,4 +147,3 @@ print("\nTrade Log:")
 for trade in strategy.trade_log:
    print(trade)
 
-   

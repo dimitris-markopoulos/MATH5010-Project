@@ -132,6 +132,9 @@ cerebro.adddata(data)
 cerebro.broker.setcash(1000)
 
 results = cerebro.run()
+cerebro.run()
+cerebro.plot(style='candlestick')
+
 strategy = results[0]
 
 # Get broker info

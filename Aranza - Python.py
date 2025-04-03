@@ -145,3 +145,5 @@ print(f"Total Profit: {profit}")
 print("\nTrade Log:")
 for trade in strategy.trade_log:
    print(trade)
+
+   
